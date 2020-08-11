@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
   {{- partial "head.html" . -}}
 </head>
 <body>
-  <h1>I'm Reymund</h1>
     {{- partial "header.html" . -}}
   <div id="content">
-      {{- block "main" . }}{{- end }}
+    <h1>I'm Reymund {{ .Site.BaseURL }}fav</h1>
+    {{- block "main" . }}{{- end }}
   </div>
     {{- partial "footer.html" . -}}
 </body>
