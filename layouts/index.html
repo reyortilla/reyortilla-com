@@ -6,7 +6,9 @@
 <body>
     {{- partial "header.html" . -}}
   <div id="content">
-    <h1>I'm Reymund</h1>
+
+    <h1>Website is {{ .Site.BaseURL }}</h1>
+
     {{- block "main" . }}{{- end }}
   </div>
     {{- partial "footer.html" . -}}
