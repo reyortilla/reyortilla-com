@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body>
+  <h1>I'm Reymund</h1>
+    {{- partial "header.html" . -}}
+  <div id="content">
+      {{- block "main" . }}{{- end }}
+  </div>
+    {{- partial "footer.html" . -}}
+</body>
+</html>
