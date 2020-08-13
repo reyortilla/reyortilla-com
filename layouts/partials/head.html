@@ -5,13 +5,13 @@
 
 <title>{{ $.Site.Title }}</title>
 <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
-<link rel="icon" href="{{ .Site.BaseURL }}/favicon.ico">
-<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}/icon.png">
+<link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
+<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}icon.png">
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/static/css/normalize.css">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/static/css/html5boilerplate.css">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/static/css/main.css">
+<link rel="stylesheet" href="{{ $.Site.BaseURL }}static/css/normalize.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}static/css/html5boilerplate.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}static/css/main.css">
 
 <!-- Google Fonts Optimization -->
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
