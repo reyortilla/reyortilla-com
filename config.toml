@@ -3,3 +3,7 @@ languageCode = "en"
 languageLang = "en-us"
 
 title = "Rey Ortilla"
+
+[params]
+  author = "Rey Ortilla"
+  description = "This is my personal blog where I share what I learn."
