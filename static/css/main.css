@@ -43,7 +43,8 @@
 :root {
   --text-color: #000c2d;
   --bg-white: #fff;
-  --bg-gray: #f5f7f9;
+  --bg-gray: #fcfcfc;
+  --link-color: #005ea2;
 }
 *,
 *::before,
@@ -54,11 +55,11 @@ html {
   box-sizing: border-box;
   font-feature-settings:"kern" 1;
   font-kerning: normal;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 100%;
 }
 body {
-  background-color: white;
+  background-color:var(--bg-gray);
   color: #1b1b1b;
   overflow-x: hidden;
 }
@@ -94,8 +95,9 @@ dfn {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
+/* Site banner */
 .site-header {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
   font-size: 1.06rem;
   line-height: 1.5;
   z-index: 300;
@@ -108,28 +110,48 @@ dfn {
 .site-header a {
   border-bottom: none;
 }
-.header-container {
-  align-items: flex-end;
-  justify-content: space-between;
-  display: flex;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
+@media all and (min-width: 64em) {
+  .header-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 64rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .header-basic .header-container {
+    align-items: flex-end;
+    justify-content: space-between;
+    display: flex;
+  }
 }
-.header-logo {
-  position: relative;
-  width: 33%;
-  border-bottom: none;
-  display: inline-block;
-  height: auto;
+@media all and (min-width: 64em) and (min-width: 64em){
+  .header-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
-.site-logo {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.46rem;
-  line-height: 1.1;
+@media all and (min-width: 64em) {
+  .header-logo {
+    border-bottom: none;
+    display: inline-block;
+    height: auto;
+  }
+  .header-basic .header-logo {
+    position: relative;
+    width: 33%;
+  }
+}
+@media all and (min-width: 64em) {
+  .site-logo {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.46rem;
+    line-height: 1.1;
+  }
+}
+.site-logo a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 .logo-text {
   display: block;
@@ -137,3 +159,68 @@ dfn {
   font-weight: 700;
   margin: 0;
 }
+/* Site navigation */
+.header-menu {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.06rem;
+  line-height: .9;
+}
+@media all and (min-width: 64em) {
+  .header-menu {
+    float: right;
+    position: relative;
+  }
+  .header-basic .header-menu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    padding: 0 0 .25rem .5rem;
+    width: 100%;
+  }
+}
+.accordion {
+  list-style-type: none;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+.accordion > li {
+  margin-bottom: 0;
+  max-width: unset;
+}
+.primary-menu > .primary-menu-item {
+  line-height: 1.1;
+}
+@media all and (min-width: 64em) {
+  .primary-menu > .primary-menu-item {
+    line-height: .9;
+    font-size: .93rem;
+  }
+}
+.primary-menu .primary-menu-item a {
+  text-decoration: none;
+}
+@media all and (min-width: 64em) {
+  .primary-menu > .primary-menu-item > a {
+    line-height: .9;
+    padding: 1rem;
+    color: var(--text-color);
+    display: block;
+    font-weight: bold;
+  }
+  .primary-menu > .primary-menu-item > a:hover {
+    color: var(--link-color);  
+  } 
+}
+@media all and (min-width: 64em) {
+  .primary-menu {
+    display: flex;
+  }
+  .header-basic .primary-menu {
+    width: auto;
+  }
+}
+/* Navigation search */
+
+

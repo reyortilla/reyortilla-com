@@ -2,8 +2,8 @@ baseURL = "https://reyortilla.com"
 languageCode = "en"
 languageLang = "en-us"
 
-title = "My Hugo Blog"
+title = "Rey Ortilla"
 
 [params]
   author = "Rey Ortilla"
-  description = "This is my personal blog where I share what I learn."
+  description = "This is my personal blog where I share what I'm learning."

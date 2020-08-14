@@ -1,17 +1,19 @@
 
 <div class="site-overlay"></div>
-<header class="site-header">
-  <div class="header-container">
+<header class="site-header header-basic" itemtype="https://schema.org/WPHeader" itemscope>
+  <div class="header-container" role="banner">
     <!-- Left part of the site header which includes the logo -->
     <div class="header-logo">
-      <div class="site-logo" id="logo">
-          <a href="/" title="Home" aria-label="Home">{{ $.Site.Title }}</a>
+      <div id="logo" class="site-logo">
+        <em class="logo-text">
+          <a href="/" title="Rey" aria-label="Rey Ortilla Home">{{ $.Site.Title }}</a>
+        </em>
       </div>
       <!-- <button class="menu-btn">Menu</button> -->
     </div>
 
     <!-- Right side of the site header which includes the menu -->
-    <nav aria-label="Primary navigation" class="header-menu">
+    <nav class="header-menu" role="navigation" aria-label="Primary navigation">
       <ul class="primary-menu accordion">
         <li class="primary-menu-item">
           <a href="javascript:void(0)" class="primary-menu-link">
