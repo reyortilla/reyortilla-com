@@ -1,26 +1,21 @@
-<!-- Basic Page Needs -->
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- Mobile Specific Meta -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- Title and meta description -->
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
 <title>{{ $.Site.Title }}</title>
 <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
-<!-- Open Graph -->
-<!-- Favicon -->
-<link rel="icon" href="/favicon.png">
-<link rel="apple-touch-icon" href="/icon.png">
-<!-- Stylesheets -->
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/main.css">
-<!-- Google Fonts Optimization 
+
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Public+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
--->
-<!-- Miscellaneous -->
+
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="icon" href="/favicon.png">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
+
 <meta name="theme-color" content="#fcfcfc">
 {{ hugo.Generator }}

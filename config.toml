@@ -1,7 +1,6 @@
 baseURL = "https://reyortilla.com"
-languageCode = "en"
-languageLang = "en-us"
-
+languageCode = "en-us"
+languageLang = "en"
 title = "Rey Ortilla"
 
 [params]
